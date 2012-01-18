@@ -8,6 +8,8 @@ class Posts extends CI_Controller
     
     function index()
     {
-        $this->load->view('index');
+        $this->load->model('posts_mod');
+        $data['query'] = $this->posts_mod->posts_list();
+        $this->load->view('index',$data);
     }
 }

@@ -6,39 +6,22 @@
             <div class="featured-title"></div>
         </div>
 			<!-- Begin post -->
-			<div id="post"> 
-				<h2 class="entry-title"><a href="#" title="title" rel="bookmark">title</a></h2>
-				 <div class="entry-date">time</div> 
-							<div class="postthumbimg-ds">
-								<a href="#">
-									<img src="#" />
-					        	</a>
-							</div><!-- End Thumb Container -->
-						
+			<?php foreach($query as $row):?>
+			<div id="post" class="post type-post status-publish format-standard sticky hentry category-live"> 
+				<h2 class="entry-title"><a href="#" title="title" rel="bookmark"><?php echo $row->title?></a></h2>
+				 <div class="entry-date"><?php echo date('Y-m-d H:i:s',$row->time);?></div> 
 						<div class="entry-content">
-							read more <span class="meta-nav">&raquo;</span>
-							<div class='page-link'></div>
-						</div>
-						<div class="clear"></div>				
-						
-						<div class="entry-meta">
-							<span class="edit-link"></span><span class="meta-sep">|</span>
-							<span class="comments-link">3</span>
-						</div>
-						
-						<div class="entry-content">
-					        read more <span class="meta-nav">&raquo;</span>
-                            <div class='page-link'></div>
+					       <?php echo $row->body;?>
 						</div>
 						<div class="clear"></div>
 						<div class="entry-meta">
-							 <span class="edit-link"></span><span class="meta-sep">|</span>
-                             <span class="comments-link">3</span>
-						</div>
+                             <a rel="bookmark" title="title" href="#">链接地址</a> <span class="meta-sep">|</span> 
+                             <span class="comments-link"><a title="title" href="#">4条评论</a></span>
+                        </div>
 						
 			</div>
 			<!-- End post -->
-
+            <?php endforeach;?>
 		</div><!-- #content -->
 	</div><!-- #container -->
 	

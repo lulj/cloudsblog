@@ -34,7 +34,7 @@
 		<div class="branding">	
 			<h1 id="blog-title" class="blogtitle">
             <a href="#" title="title">title</a></h1>
-			<div class="description">description </div>
+			<div class="description"></div>
              
          <div class="searchbox">
            <form id="searchform" method="get" action="/search">
